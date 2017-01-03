@@ -149,7 +149,7 @@ class RoomChatViewController: JSQMessagesViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         print("已點傳送按鈕")
         let newMessage = messageRef.childByAutoId()
-        let messageData = ["text":text, "senderId":senderId, "senderName":senderDisplayName, "MediaType":"TEXT"]
+        let messageData = ["text":text, "senderId":uuid, "senderName":senderDisplayName, "MediaType":"TEXT"]
         newMessage.setValue(messageData)
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         self.finishSendingMessage()
