@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>864889663321-mee7dsm4albmlem1dl2gi1ddml7bjkrp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.864889663321-mee7dsm4albmlem1dl2gi1ddml7bjkrp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDf-NqDpN3jm8DQpCP_IWeSOpVMVpsfXA4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>864889663321</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Lilycheng.GoChat</string>
+	<key>PROJECT_ID</key>
+	<string>tripgif-b205b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tripgif-b205b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:864889663321:ios:5910fce8b1ea6cf0</string>
+	<key>DATABASE_URL</key>
+	<string>https://tripgif-b205b.firebaseio.com</string>
+</dict>
+</plist>

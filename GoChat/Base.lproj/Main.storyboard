@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Js-07-bcT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="bIr-Vh-a72">
+            <objects>
+                <viewController id="5Js-07-bcT" customClass="WelcomeViewController" customModule="GoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qbt-hG-ReQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hbq-zA-Vy6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LIb-E3-LuM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeI-Fp-4tU">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4kj-25-5dD"/>
+                                    <constraint firstAttribute="height" constant="65" id="eQU-AI-TbI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="開始同夥模式">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="UserInfoButton:" destination="5Js-07-bcT" eventType="touchUpInside" id="QtA-KE-1zZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nLK-6j-0sd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="IPZ-Qi-yOJ"/>
+                                    <constraint firstAttribute="height" constant="212" id="dQi-2G-abM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歡迎來到TripGIF同夥模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjv-rg-V33">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫您紀錄專屬夥伴們的聊天地圖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyz-zX-wHf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nLK-6j-0sd" firstAttribute="centerX" secondItem="LIb-E3-LuM" secondAttribute="centerX" id="4Ft-Xm-bFu"/>
+                            <constraint firstItem="nLK-6j-0sd" firstAttribute="top" secondItem="Qbt-hG-ReQ" secondAttribute="bottom" constant="82" id="Cbe-DF-Vdz"/>
+                            <constraint firstItem="VeI-Fp-4tU" firstAttribute="top" secondItem="Qbt-hG-ReQ" secondAttribute="bottom" constant="469" id="JOP-QH-AuH"/>
+                            <constraint firstItem="kyz-zX-wHf" firstAttribute="top" secondItem="Qbt-hG-ReQ" secondAttribute="bottom" constant="382" id="aa4-so-sjt"/>
+                            <constraint firstItem="kyz-zX-wHf" firstAttribute="centerX" secondItem="LIb-E3-LuM" secondAttribute="centerX" id="lMk-Jd-eJ2"/>
+                            <constraint firstItem="VeI-Fp-4tU" firstAttribute="centerX" secondItem="LIb-E3-LuM" secondAttribute="centerX" id="oBk-5E-ZYw"/>
+                            <constraint firstItem="Mjv-rg-V33" firstAttribute="centerX" secondItem="LIb-E3-LuM" secondAttribute="centerX" id="oDq-xz-xk1"/>
+                            <constraint firstItem="Mjv-rg-V33" firstAttribute="top" secondItem="Qbt-hG-ReQ" secondAttribute="bottom" constant="353" id="qO4-aW-3yz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynM-m3-tN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922.39999999999998" y="488.90554722638683"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ma0-sc-zoU">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="j2d-G6-POv" customClass="LoginViewController" customModule="GoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ak4-ps-aP1"/>
+                        <viewControllerLayoutGuide type="bottom" id="8zD-FK-aiU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mXq-P7-5yS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW4-ES-o4h">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NQR-nJ-Gz7"/>
+                                    <constraint firstAttribute="height" constant="40" id="sXd-ca-tqe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="開始聊天">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="NickNameButton:" destination="j2d-G6-POv" eventType="touchUpInside" id="YIu-20-8pM"/>
+                                    <segue destination="g23-Pf-vCe" kind="presentation" identifier="LoginToApp" id="QEs-mj-CXg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我的暱稱" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7Y-LF-Tqo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5EZ-GJ-xNi"/>
+                                    <constraint firstAttribute="width" constant="200" id="KXT-ng-YrR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsd-Pm-mvA" userLabel="設定個人照片">
+                                <color key="backgroundColor" red="1" green="0.76028923280000005" blue="0.76817506619999998" alpha="0.42762433979999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lp3-MI-iQh"/>
+                                    <constraint firstAttribute="height" constant="40" id="gsM-ju-L4W"/>
+                                </constraints>
+                                <state key="normal" title="  設定個人照片">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetPhotoButton:" destination="j2d-G6-POv" eventType="touchUpInside" id="Tdw-ff-JFz"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="d21-Rd-BX5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="i2v-9N-EYo"/>
+                                    <constraint firstAttribute="height" constant="100" id="xOd-Km-hvQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CW4-ES-o4h" firstAttribute="top" secondItem="ak4-ps-aP1" secondAttribute="bottom" constant="235" id="DcX-lS-2rx"/>
+                            <constraint firstItem="Rsd-Pm-mvA" firstAttribute="centerX" secondItem="mXq-P7-5yS" secondAttribute="centerX" id="Ibq-3d-lxr"/>
+                            <constraint firstItem="CW4-ES-o4h" firstAttribute="centerX" secondItem="mXq-P7-5yS" secondAttribute="centerX" id="IvR-7T-X8p"/>
+                            <constraint firstItem="d21-Rd-BX5" firstAttribute="centerX" secondItem="mXq-P7-5yS" secondAttribute="centerX" id="Och-ny-sbO"/>
+                            <constraint firstItem="Rsd-Pm-mvA" firstAttribute="top" secondItem="ak4-ps-aP1" secondAttribute="bottom" constant="183" id="iTA-wS-mxz"/>
+                            <constraint firstItem="d21-Rd-BX5" firstAttribute="top" secondItem="ak4-ps-aP1" secondAttribute="bottom" constant="35" id="mAE-O8-e0D"/>
+                            <constraint firstItem="f7Y-LF-Tqo" firstAttribute="centerX" secondItem="mXq-P7-5yS" secondAttribute="centerX" id="rJM-hI-u7t"/>
+                            <constraint firstItem="f7Y-LF-Tqo" firstAttribute="top" secondItem="ak4-ps-aP1" secondAttribute="bottom" constant="141" id="sq6-bB-0YU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Name" destination="f7Y-LF-Tqo" id="yaq-xC-okh"/>
+                        <outlet property="userImg" destination="d21-Rd-BX5" id="2Jq-wp-QT4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yu-4d-nKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="488.90554722638683"/>
+        </scene>
+        <!--Rooms View Controller-->
+        <scene sceneID="0th-Ej-Wxv">
+            <objects>
+                <viewController storyboardIdentifier="RoomVC" id="ovH-f5-pHf" userLabel="Rooms View Controller" customClass="RoomsViewController" customModule="GoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Edy-VD-d7D"/>
+                        <viewControllerLayoutGuide type="bottom" id="UKX-Pe-hWc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pb9-aq-XGk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyY-ZW-Lse">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1t-NI-yjn">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-fK-ixu">
+                                                <frame key="frameInset" minX="225" minY="70" width="100" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="創立房間">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="NewRoom:" destination="ovH-f5-pHf" eventType="touchUpInside" id="wJr-x0-kEp"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入房名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-eK-eZ0">
+                                                <frame key="frameInset" minX="58" minY="80" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmn-ut-ZaR">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-QY-ZFA">
+                                                <frame key="frameInset" minX="222" minY="75" width="100" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="進入房間">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="EnterRoom:" destination="ovH-f5-pHf" eventType="touchUpInside" id="Nf4-fW-LjX"/>
+                                                    <segue destination="Ezb-JR-hjq" kind="show" identifier="ShowMapChat" id="7dX-FH-KKF"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入房號" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-Aa-Zze">
+                                                <frame key="frameInset" minX="59" minY="85" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.76028923280000005" blue="0.76817506619999998" alpha="0.42762433979999998" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvI-Vb-hdf">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iyY-ZW-Lse" firstAttribute="leading" secondItem="pb9-aq-XGk" secondAttribute="leading" id="67F-8X-xV8"/>
+                            <constraint firstItem="iyY-ZW-Lse" firstAttribute="width" secondItem="pb9-aq-XGk" secondAttribute="width" id="Lqu-Ts-dz4"/>
+                            <constraint firstItem="iyY-ZW-Lse" firstAttribute="height" secondItem="pb9-aq-XGk" secondAttribute="height" multiplier="0.9" id="QS2-z4-K80"/>
+                            <constraint firstItem="iyY-ZW-Lse" firstAttribute="top" secondItem="Edy-VD-d7D" secondAttribute="bottom" constant="10" id="brP-wW-nnE"/>
+                            <constraint firstAttribute="trailing" secondItem="iyY-ZW-Lse" secondAttribute="trailing" id="eZc-ew-cuX"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vR2-Yz-76T">
+                        <barButtonItem key="leftBarButtonItem" title="登出" id="trX-Ye-m5K">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="Logout:" destination="ovH-f5-pHf" id="njy-qr-jMH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="InputRoomName" destination="I0b-eK-eZ0" id="XHH-q1-47n"/>
+                        <outlet property="InputRoomNum" destination="hZg-Aa-Zze" id="DFG-c3-GcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yf6-65-nHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="488.90554722638683"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hQU-kq-n6L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="g23-Pf-vCe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YcJ-Qg-LxL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ovH-f5-pHf" kind="relationship" relationship="rootViewController" id="UxG-wV-huQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LT5-lA-N7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="489"/>
+        </scene>
+        <!--Room Map View Controller-->
+        <scene sceneID="lfu-1h-KeN">
+            <objects>
+                <viewController storyboardIdentifier="mapChatVC" id="Ezb-JR-hjq" customClass="RoomMapViewController" customModule="GoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JeS-FN-yxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="QRK-pM-NAw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dSz-mF-cOR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ds-yg-q7Z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="Gmm-eP-Zwk"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="zpt-v9-M7i" kind="embed" identifier="showChat" id="6RP-xp-c2O"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1M-Qt-gmS">
+                                <frame key="frameInset" minX="193" minY="255" width="68" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="updateLocation" destination="Ezb-JR-hjq" eventType="touchUpInside" id="DdO-bq-rqw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moo-85-1mb">
+                                <frame key="frameInset" minX="295" minY="255" width="46" height="30"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="choosePictureWithSender:" destination="Ezb-JR-hjq" eventType="touchUpInside" id="wpt-iq-Klw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Moo-85-1mb" firstAttribute="top" secondItem="JeS-FN-yxS" secondAttribute="bottom" constant="191" id="5eu-SX-L9q"/>
+                            <constraint firstItem="2ds-yg-q7Z" firstAttribute="width" secondItem="dSz-mF-cOR" secondAttribute="width" id="H7f-DV-6JY"/>
+                            <constraint firstItem="QRK-pM-NAw" firstAttribute="top" secondItem="2ds-yg-q7Z" secondAttribute="bottom" id="nJp-9D-9GP"/>
+                            <constraint firstItem="2ds-yg-q7Z" firstAttribute="centerX" secondItem="dSz-mF-cOR" secondAttribute="centerX" id="pbV-im-6nW"/>
+                            <constraint firstItem="r1M-Qt-gmS" firstAttribute="top" secondItem="JeS-FN-yxS" secondAttribute="bottom" constant="191" id="pcf-t0-MOu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tho-Ej-1Bb">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="MxS-SM-bZX">
+                            <connections>
+                                <action selector="updateLocation" destination="Ezb-JR-hjq" id="bkR-Xz-Bd1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKf-dh-QTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="489"/>
+        </scene>
+        <!--Room Chat View Controller-->
+        <scene sceneID="M0s-Wx-uiP">
+            <objects>
+                <viewController id="zpt-v9-M7i" customClass="RoomChatViewController" customModule="GoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2iH-Si-IgF"/>
+                        <viewControllerLayoutGuide type="bottom" id="kB0-Qf-tcN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7g2-dL-kWB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.77618416674263369" blue="0.76522235488561863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDx-X1-cnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542" y="592"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo.jpg" width="409" height="360"/>
+        <image name="user.png" width="100" height="100"/>
+    </resources>
+</document>
