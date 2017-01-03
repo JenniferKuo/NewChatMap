@@ -175,7 +175,7 @@ class RoomMapViewController: UIViewController, UIImagePickerControllerDelegate, 
                 marker.position = CLLocationCoordinate2DMake(Double(latitude)!, Double(longitude)!)
                 marker.map = self.mapView
                 
-                let camera = GMSCameraPosition.camera(withLatitude: Double(latitude)!, longitude: Double(longitude)!, zoom: 10)
+                let camera = GMSCameraPosition.camera(withLatitude: Double(self.myLat)!, longitude: Double(self.myLong)!, zoom: 10)
                 self.mapView.animate(to: camera)
             }
         }
@@ -345,7 +345,7 @@ class RoomMapViewController: UIViewController, UIImagePickerControllerDelegate, 
         layer.cornerRadius = CGFloat(radius)
         layer.borderColor = myColor.cgColor
         layer.borderWidth = CGFloat(borderWidth)
-        
+        layer.backgroundColor = myColor.cgColor
         UIGraphicsBeginImageContext(imageView.bounds.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)
         let roundedImage = UIGraphicsGetImageFromCurrentImageContext()

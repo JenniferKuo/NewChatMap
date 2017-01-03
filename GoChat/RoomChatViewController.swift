@@ -44,6 +44,10 @@ class RoomChatViewController: JSQMessagesViewController {
         print("進來了...我要進的房號是" + self.targetRoomNum)
         print(messageRef)
         
+        observeUsers()
+        observeMessages()
+        print("大頭照陣列\(avatarDict[uuid])")
+        
         // set avatars
         collectionView?.collectionViewLayout.incomingAvatarViewSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
         collectionView?.collectionViewLayout.outgoingAvatarViewSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
@@ -61,30 +65,21 @@ class RoomChatViewController: JSQMessagesViewController {
                 self.senderDisplayName = ""
             }
         }
-        //observeUsers(uuid: senderId)
-        observeMessages()
     }
-    func observeUsers(uuid: String){
-        self.roomRef.child("roomUsers").child(uuid).observe(FIRDataEventType.value){
-            (snapshot: FIRDataSnapshot) in
-            if let chatdict = snapshot.value as? [String:Any]
-            {
-                print("my room dict\(chatdict)")
-                let avatarUrl = chatdict["UserImgUrl"] as! String
-                //
-                print("i want url\(avatarUrl)")
-                self.setupAvatar(url: avatarUrl, messageId: uuid)
-                
-                let myid = String(self.senderId)
-                //根據roomUser senderId(uuid)去資料庫抓user的senderName
-                //取出我的暱稱
-                if (chatdict["id"] as! String) == myid {
-                    //取出我的暱稱
-                    let myname = chatdict["NickName"] as! String
-                    print("myname is " + myname)
-                    self.senderDisplayName = myname
+    
+    func observeUsers(){
+        print("start observe user")
+        FIRDatabase.database().reference().child("TripGifUsers")
+            .observe(FIRDataEventType.value){
+                (snapshot: FIRDataSnapshot) in
+                for child in snapshot.children.allObjects as! [FIRDataSnapshot]{
+                    let chatdict = child.value as! [String:AnyObject]
+                    print("my user picture dict\(chatdict)")
+                    let avatarUrl = chatdict["UserImgUrl"] as! String
+                    let currentId = chatdict["uuid"] as! String
+                    print("i want url\(avatarUrl)currentId\(currentId)")
+                    self.setupAvatar(url: avatarUrl, messageId: currentId)
                 }
-            }
         }
     }
     func setupAvatar(url: String, messageId:String){
@@ -101,8 +96,10 @@ class RoomChatViewController: JSQMessagesViewController {
             //可以的：JSQMessagesAvatarImageFactory.avatarImage(withPlaceholder: UIImage(named:"user"), diameter: 30)
             print("i use default image")
         }
+        print("我的大頭照\(avatarDict[messageId])")
         collectionView.reloadData()
     }
+    
     func observeMessages() {
         messageRef.observe(FIRDataEventType.childAdded){(snapshot: FIRDataSnapshot) in
             if let dict = snapshot.value as?[String: AnyObject]{
@@ -110,7 +107,7 @@ class RoomChatViewController: JSQMessagesViewController {
                 let senderId = dict["senderId"] as! String
                 let senderName = dict["senderName"] as! String
                 
-                self.observeUsers(uuid: senderId)
+                self.observeUsers()
                 
                 switch mediaType{
                 case "TEXT":
@@ -205,7 +202,9 @@ class RoomChatViewController: JSQMessagesViewController {
         //return nil
         //預設方式：
         //return JSQMessagesAvatarImageFactory.avatarImage(withPlaceholder: UIImage(named:"user"), diameter: 30)
-        return avatarDict[message.senderId]
+        print("訊息sender\(message.senderId!)")
+        print("回傳大頭照\(avatarDict[(message.senderId)!])")
+        return avatarDict[(message.senderId)!]
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -96,6 +96,7 @@ class LoginViewController: UIViewController{
                                 //新增User到資料庫
                                 let newUser = userRef.child(self.uuid)
                                 newUser.child("NickName").setValue(userName)
+                                newUser.child("uuid").setValue(self.uuid)
                                 self.setUserImage(picture: self.userImg.image)
                         })
                     }
